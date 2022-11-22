@@ -13,11 +13,7 @@ numbers = {
 }
 phone_number = input("Phone: ")
 str = ""
-list = []
-for num in phone_number:
-    str += num
-    list.append(int(num))
 
-for i in list:
-    if i in numbers:
-        print(numbers.get(i), end = " ") #end will print things on one line
+for ch in phone_number:
+    str += numbers.get(int(ch), "!") + " "
+print(str)
